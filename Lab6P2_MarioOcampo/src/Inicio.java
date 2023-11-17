@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -28,52 +31,98 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        CrearCuenta = new javax.swing.JButton();
+        IniciarSesion = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
-        nombre = new javax.swing.JTextPane();
+        usuario = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
-        contra = new javax.swing.JTextPane();
+        contraseña = new javax.swing.JTextPane();
         jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        correo = new javax.swing.JTextPane();
+        jLabel5 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        residencia = new javax.swing.JTextPane();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        nacimiento = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Sitka Heading", 3, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Need For Speed");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 340, 60));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Usuario");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 70, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 70, -1));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Contraseña");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 100, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 100, -1));
 
-        jButton1.setText("Crear Cuenta");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, 150, 30));
+        CrearCuenta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        CrearCuenta.setForeground(new java.awt.Color(0, 0, 0));
+        CrearCuenta.setText("Crear Cuenta");
+        CrearCuenta.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                CrearCuentaMouseClicked(evt);
+            }
+        });
+        getContentPane().add(CrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 150, 180, 70));
 
-        jButton2.setText("Iniciar Sesion");
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 333, 150, 30));
+        IniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IniciarSesion.setForeground(new java.awt.Color(0, 0, 0));
+        IniciarSesion.setText("Iniciar Sesion");
+        getContentPane().add(IniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 250, 180, 70));
 
-        jScrollPane3.setViewportView(nombre);
+        jScrollPane3.setViewportView(usuario);
 
-        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 130, 240, 40));
+        getContentPane().add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 240, 30));
 
-        jScrollPane4.setViewportView(contra);
+        jScrollPane4.setViewportView(contraseña);
 
-        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 210, 240, 40));
+        getContentPane().add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 240, 30));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/backgrd.jpg"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Correo");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, 70, 30));
+
+        jScrollPane1.setViewportView(correo);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(14, 260, 240, 30));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Pais de Residencia");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 300, 140, -1));
+
+        jScrollPane2.setViewportView(residencia);
+
+        getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 240, 30));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setText("Fecha de nacimiento");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 370, 150, -1));
+
+        jScrollPane5.setViewportView(nacimiento);
+
+        getContentPane().add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 240, 30));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CrearCuentaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CrearCuentaMouseClicked
+        Usuario obj;
+        obj = new Usuario(usuario.getText(), contraseña.getText(), correo.getText(), residencia.getText(), nacimiento.getText());
+    }//GEN-LAST:event_CrearCuentaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -111,15 +160,25 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextPane contra;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton CrearCuenta;
+    private javax.swing.JButton IniciarSesion;
+    private javax.swing.JTextPane contraseña;
+    private javax.swing.JTextPane correo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
-    private javax.swing.JTextPane nombre;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTextPane nacimiento;
+    private javax.swing.JTextPane residencia;
+    private javax.swing.JTextPane usuario;
     // End of variables declaration//GEN-END:variables
+
+    ArrayList<Usuario> datos = new ArrayList();
 }
