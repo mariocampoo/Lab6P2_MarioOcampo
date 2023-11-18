@@ -1,5 +1,6 @@
 
 import java.awt.Color;
+import java.util.ArrayList;
 
 public class Auto {
     private String marca;
@@ -7,6 +8,7 @@ public class Auto {
     private Color color;
     private int precio;
     private String origen;
+
 
     public Auto() {
     }

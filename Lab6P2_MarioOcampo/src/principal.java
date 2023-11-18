@@ -69,6 +69,16 @@ public class principal extends javax.swing.JFrame {
 
         EliminarAuto.setForeground(new java.awt.Color(0, 0, 0));
         EliminarAuto.setText("Eliminar Auto");
+        EliminarAuto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EliminarAutoMouseClicked(evt);
+            }
+        });
+        EliminarAuto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EliminarAutoActionPerformed(evt);
+            }
+        });
         getContentPane().add(EliminarAuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 140, 40));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bmw-m3-gtr-need-for-speed-most-wanted-need-for-speed-most-wanted-2012-video-game-car-street-racing-hd-wallpaper-preview.jpg"))); // NOI18N
@@ -90,10 +100,18 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_modificarMouseClicked
 
     private void MostrarAutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAutoMouseClicked
-        mostrarA vnt3 = new mostrarA();
+        
+    }//GEN-LAST:event_MostrarAutoMouseClicked
+
+    private void EliminarAutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAutoMouseClicked
+        eliminar vnt3 = new eliminar();
         vnt3.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_MostrarAutoMouseClicked
+    }//GEN-LAST:event_EliminarAutoMouseClicked
+
+    private void EliminarAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarAutoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EliminarAutoActionPerformed
 
     /**
      * @param args the command line arguments

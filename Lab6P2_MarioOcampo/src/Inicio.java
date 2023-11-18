@@ -180,9 +180,7 @@ public class Inicio extends javax.swing.JFrame {
         residencia.setText("");
         nacimiento.setText("");
 
-        prin vnt3 = new prin();
-        vnt3.setVisible(true);
-        this.dispose();
+
 
     }//GEN-LAST:event_CrearCuentaMouseClicked
 

@@ -20,6 +20,9 @@ public class agregarA extends javax.swing.JFrame {
     public agregarA() {
         initComponents();
     }
+    ArrayList<Auto> auto = new ArrayList();
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -91,6 +94,11 @@ public class agregarA extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, -1));
 
         color.setForeground(new java.awt.Color(0, 0, 0));
@@ -124,6 +132,10 @@ public class agregarA extends javax.swing.JFrame {
         Auto nuevoAuto = new Auto(marca.getText(),modelo.getText(),color.getBackground(), Integer.parseInt(precio.getText()), origen.getText());
         auto.add(nuevoAuto);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,5 +192,5 @@ public class agregarA extends javax.swing.JFrame {
     private javax.swing.JTextPane precio;
     // End of variables declaration//GEN-END:variables
 
-ArrayList<Auto> auto = new ArrayList();
+
 }
