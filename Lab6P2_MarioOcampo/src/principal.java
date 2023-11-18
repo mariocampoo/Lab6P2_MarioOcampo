@@ -88,9 +88,10 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void AgregarAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarAutoActionPerformed
-        agregarA vnt3 = new agregarA();
-        vnt3.setVisible(true);
-        this.dispose();
+        añadir v3 = new añadir (this, true);
+        v3.setVisible(true);
+        
+        dispose();
     }//GEN-LAST:event_AgregarAutoActionPerformed
 
     private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
@@ -104,9 +105,10 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_MostrarAutoMouseClicked
 
     private void EliminarAutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarAutoMouseClicked
-        eliminar vnt3 = new eliminar();
-        vnt3.setVisible(true);
-        this.dispose();
+        elim v3 = new elim (this, true);
+        v3.setVisible(true);
+        
+        dispose();
     }//GEN-LAST:event_EliminarAutoMouseClicked
 
     private void EliminarAutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EliminarAutoActionPerformed
