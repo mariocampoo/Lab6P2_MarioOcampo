@@ -24,10 +24,6 @@ public class mostrarA extends javax.swing.JFrame {
         tablee.setModel(tabla);
         
     }
-    
-    void agregar (){
-        
-    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -41,6 +37,8 @@ public class mostrarA extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablee = new javax.swing.JTable();
+        paises = new javax.swing.JComboBox<>();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,10 +60,25 @@ public class mostrarA extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tablee);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 470, 200));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 470, 200));
+
+        paises.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Japon", "Italia", "USA", "Alemania", "Francia", "UK" }));
+        paises.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paisesActionPerformed(evt);
+            }
+        });
+        getContentPane().add(paises, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, 150, -1));
+
+        jButton1.setText("Mostrar Autos");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 180, 120, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void paisesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paisesActionPerformed
+        
+    }//GEN-LAST:event_paisesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -103,8 +116,10 @@ public class mostrarA extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox<String> paises;
     private javax.swing.JTable tablee;
     // End of variables declaration//GEN-END:variables
 }
