@@ -7,6 +7,7 @@ public class Usuario {
     private String correo;
     private String residencia;
     private String nacimiento;
+    private int dinero = 150000;
     
 
     public Usuario() {

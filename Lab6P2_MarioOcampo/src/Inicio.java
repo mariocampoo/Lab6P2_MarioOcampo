@@ -31,7 +31,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         CrearCuenta = new javax.swing.JButton();
-        IniciarSesion = new javax.swing.JButton();
+        IniciarSesionAdmin = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         usuario = new javax.swing.JTextPane();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -82,23 +82,29 @@ public class Inicio extends javax.swing.JFrame {
                 CrearCuentaMouseClicked(evt);
             }
         });
+        CrearCuenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CrearCuentaActionPerformed(evt);
+            }
+        });
         getContentPane().add(CrearCuenta, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, 150, 50));
 
-        IniciarSesion.setBackground(new java.awt.Color(153, 153, 153));
-        IniciarSesion.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        IniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
-        IniciarSesion.setText("Iniciar Sesion");
-        IniciarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+        IniciarSesionAdmin.setBackground(new java.awt.Color(153, 153, 153));
+        IniciarSesionAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        IniciarSesionAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        IniciarSesionAdmin.setText("Iniciar Sesion Admin");
+        IniciarSesionAdmin.setActionCommand("Iniciar Sesion Admin");
+        IniciarSesionAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                IniciarSesionMouseClicked(evt);
+                IniciarSesionAdminMouseClicked(evt);
             }
         });
-        IniciarSesion.addActionListener(new java.awt.event.ActionListener() {
+        IniciarSesionAdmin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IniciarSesionActionPerformed(evt);
+                IniciarSesionAdminActionPerformed(evt);
             }
         });
-        getContentPane().add(IniciarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 250, 170, 40));
+        getContentPane().add(IniciarSesionAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 260, 210, 40));
 
         jScrollPane3.setViewportView(usuario);
 
@@ -174,25 +180,31 @@ public class Inicio extends javax.swing.JFrame {
         residencia.setText("");
         nacimiento.setText("");
 
-    }//GEN-LAST:event_CrearCuentaMouseClicked
-
-    private void IniciarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarSesionMouseClicked
-        principal vnt3 = new principal();
+        prin vnt3 = new prin();
         vnt3.setVisible(true);
         this.dispose();
 
-        if (datos.contains(veriContra.getText())) {
+    }//GEN-LAST:event_CrearCuentaMouseClicked
 
+    private void IniciarSesionAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_IniciarSesionAdminMouseClicked
+        if (veriContra.getText().equals("admin")) {
+            principal vnt3 = new principal();
+            vnt3.setVisible(true);
+            this.dispose();
         } else {
             javax.swing.JOptionPane.showInputDialog("Contraseña Incorrecta");
         }
 
 
-    }//GEN-LAST:event_IniciarSesionMouseClicked
+    }//GEN-LAST:event_IniciarSesionAdminMouseClicked
 
-    private void IniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarSesionActionPerformed
+    private void IniciarSesionAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IniciarSesionAdminActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_IniciarSesionActionPerformed
+    }//GEN-LAST:event_IniciarSesionAdminActionPerformed
+
+    private void CrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CrearCuentaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CrearCuentaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -231,7 +243,7 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton CrearCuenta;
-    private javax.swing.JButton IniciarSesion;
+    private javax.swing.JButton IniciarSesionAdmin;
     private javax.swing.JTextPane contraseña;
     private javax.swing.JTextPane correo;
     private javax.swing.JLabel jLabel1;
@@ -259,5 +271,5 @@ public class Inicio extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     ArrayList<Usuario> datos = new ArrayList();
-    
+
 }

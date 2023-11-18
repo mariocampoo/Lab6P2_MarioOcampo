@@ -6,15 +6,17 @@ public class Auto {
     private String modelo;
     private Color color;
     private int precio;
+    private String origen;
 
     public Auto() {
     }
 
-    public Auto(String marca, String modelo, Color color, int precio) {
+    public Auto(String marca, String modelo, Color color, int precio, String origen) {
         this.marca = marca;
         this.modelo = modelo;
         this.color = color;
         this.precio = precio;
+        this.origen = origen;
     }
 
     public String getMarca() {
@@ -49,13 +51,23 @@ public class Auto {
         this.precio = precio;
     }
 
+    public String getOrigen() {
+        return origen;
+    }
+
+    public void setOrigen(String origen) {
+        this.origen = origen;
+    }
+
+
     @Override
     public String toString() {
         return "Auto" + "\n"
                 + " Marca = " + marca + "\n"
                 + " Modelo = " + modelo + "\n"
                 + " Color = " + color + "\n"
-                + " Precio = " + precio;
+                + " Precio = " + precio + "\n"
+                + " Origen = " + origen;
     }
     
     

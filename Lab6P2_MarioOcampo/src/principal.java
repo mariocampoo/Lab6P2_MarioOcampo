@@ -30,12 +30,13 @@ public class principal extends javax.swing.JFrame {
         modificar = new javax.swing.JButton();
         MostrarAuto = new javax.swing.JButton();
         EliminarAuto = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Sitka Heading", 3, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 102));
         jLabel2.setText("Need For Speed");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, 340, 60));
 
@@ -50,15 +51,28 @@ public class principal extends javax.swing.JFrame {
 
         modificar.setForeground(new java.awt.Color(0, 0, 0));
         modificar.setText("Modificar ");
+        modificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                modificarMouseClicked(evt);
+            }
+        });
         getContentPane().add(modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 170, 140, 40));
 
         MostrarAuto.setForeground(new java.awt.Color(0, 0, 0));
         MostrarAuto.setText("Mostrar Autos");
+        MostrarAuto.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                MostrarAutoMouseClicked(evt);
+            }
+        });
         getContentPane().add(MostrarAuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 140, 40));
 
         EliminarAuto.setForeground(new java.awt.Color(0, 0, 0));
         EliminarAuto.setText("Eliminar Auto");
         getContentPane().add(EliminarAuto, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 290, 140, 40));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bmw-m3-gtr-need-for-speed-most-wanted-need-for-speed-most-wanted-2012-video-game-car-street-racing-hd-wallpaper-preview.jpg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 380));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -68,6 +82,18 @@ public class principal extends javax.swing.JFrame {
         vnt3.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_AgregarAutoActionPerformed
+
+    private void modificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_modificarMouseClicked
+        modificarA vnt3 = new modificarA();
+        vnt3.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_modificarMouseClicked
+
+    private void MostrarAutoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MostrarAutoMouseClicked
+        mostrarA vnt3 = new mostrarA();
+        vnt3.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_MostrarAutoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -108,6 +134,7 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton AgregarAuto;
     private javax.swing.JButton EliminarAuto;
     private javax.swing.JButton MostrarAuto;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JButton modificar;
     // End of variables declaration//GEN-END:variables
